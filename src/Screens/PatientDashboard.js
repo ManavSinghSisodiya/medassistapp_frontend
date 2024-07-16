@@ -21,6 +21,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import PatientQuestioner from "./PatientQuestioner"
+import ListBlog from "./ListBlog";
 
 export default function PatientDashboard()
 {
@@ -34,7 +35,7 @@ var navigate=useNavigate()
     <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
       <nav aria-label="main mailbox folders">
         <List>
-          <ListItem disablePadding>
+          {/* <ListItem disablePadding>
             <ListItemButton onClick={()=>navigate('/doctordashboard/questioninterface')}>
               <ListItemIcon>
                 <LocalHospitalIcon />
@@ -49,23 +50,23 @@ var navigate=useNavigate()
               </ListItemIcon>
               <ListItemText primary="Add Options" />
             </ListItemButton>
-          </ListItem>
+          </ListItem> */}
       
-          {/* <ListItem disablePadding>
-            <ListItemButton>
+          <ListItem disablePadding>
+            <ListItemButton onClick={()=>navigate('/patientdashboard/listblog')}>
               <ListItemIcon>
                 <PersonSearchIcon/>
               </ListItemIcon>
               <ListItemText primary="Patient" />
             </ListItemButton>
-          </ListItem> */}
+          </ListItem>
         </List>
       </nav>
       <Divider />
       <nav aria-label="secondary mailbox folders">
         <List>
         <ListItem disablePadding>
-            <ListItemButton  onClick={()=>navigate('/doctorlogin')}>
+            <ListItemButton  onClick={()=>navigate('/patientlogin')}>
               <ListItemText primary="Sign out" />
             </ListItemButton>
           </ListItem>
@@ -136,6 +137,8 @@ var navigate=useNavigate()
   <Route element={<ListofDoctors/>} path="/listofdoctors"/>
   <Route element={<SelectedDoctor/>} path="/selecteddoctor" />
   <Route element={<PatientQuestioner/>}  path="/patientquestioner"  />
+  <Route element={<ListBlog/>}  path="/listblog"  />
+
   </Routes>
   </Grid>
   </Grid>

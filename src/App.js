@@ -14,6 +14,8 @@ import PatientLogin from "./Screens/PatientLogin";
 import PatientDashboard from "./Screens/PatientDashboard";
 import ListofDoctors from "./Screens/ListofDoctors";
 import Main from "./Screens/main";
+import ListBlog from "./Screens/ListBlog";
+import AddBlog from "./Screens/AddBlog";
 function App() {
   return (
    <div>
@@ -31,6 +33,8 @@ function App() {
           <Route element={<ListofDoctors/>} path="/listdoctors"/>
           <Route element={<DoctorInterface/>} path="/doctorinterface"/>
           <Route element={<Main/>} path="/main/*"/>
+          <Route element={<AddBlog/>} path="/addblog"/>
+          <Route element={<ListBlog/>} path="/listblog"/>
         
            
       </Routes>

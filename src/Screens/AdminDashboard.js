@@ -48,14 +48,14 @@ var navigate=useNavigate()
               <ListItemText primary="Manage Doctors" />
             </ListItemButton>
           </ListItem>
-          <ListItem disablePadding>
+          {/* <ListItem disablePadding>
             <ListItemButton  onClick={()=>navigate('/admindashboard/patientlist')}>
               <ListItemIcon>
                 <PersonSearchIcon/>
               </ListItemIcon>
               <ListItemText primary="patients" />
             </ListItemButton>
-          </ListItem>
+          </ListItem> */}
         </List>
       </nav>
       <Divider />

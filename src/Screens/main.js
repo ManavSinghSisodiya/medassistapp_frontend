@@ -18,6 +18,7 @@ import makeStyles from "@mui/styles/makeStyles";
 import Heading from "../Component/Heading";
 import Swal from "sweetalert2";
 import doctorimage from "../assets/doctor.webp" 
+import doctorimage2 from "../assets/download (1).png"
 import listdoctor from "../assets/listdoctor.png"
 import { serverURL, getData, postData } from "../Services/FetchDjangoServices";
 import { RestaurantOutlined } from "@mui/icons-material";

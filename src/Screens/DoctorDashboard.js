@@ -19,6 +19,7 @@ import { imageURL } from "../Services/FetchDjangoServices";
 import PatientList from "./PatientList";
 import PrescriptionInterface  from "./PrescriptionInterface"
 import Prescriptionpdf from "./Prescriptionpdf"
+import AddBlog from "./AddBlog";
 export default function DoctorDashboard()
 {
  var doctor=JSON.parse(localStorage.getItem('DOCTOR'))    
@@ -29,6 +30,14 @@ var navigate=useNavigate()
     <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
       <nav aria-label="main mailbox folders">
         <List>
+          <ListItem disablePadding>
+            <ListItemButton onClick={()=>navigate('/doctordashboard/addblog')}>
+              <ListItemIcon>
+                <LocalHospitalIcon />
+              </ListItemIcon>
+              <ListItemText primary="Add Blog" />
+            </ListItemButton>
+          </ListItem>
           <ListItem disablePadding>
             <ListItemButton onClick={()=>navigate('/doctordashboard/questioninterface')}>
               <ListItemIcon>
@@ -120,6 +129,7 @@ var navigate=useNavigate()
   <Route element={<PatientList/>} path="/patientlist"/>
   <Route element={<PrescriptionInterface/>} path="/ps"/>
   <Route element={<Prescriptionpdf/>} path="/ppdc"/>
+  <Route element={<AddBlog/>} path="/addblog"/>
   
   </Routes>
   </Grid>

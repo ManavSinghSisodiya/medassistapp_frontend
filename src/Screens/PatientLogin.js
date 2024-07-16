@@ -127,14 +127,15 @@ export default function PatientLogin() {
                 Sign In
               </Button>
               <Grid container>
-                <Grid item xs>
-                  <Link href="#" variant="body2">
-                    Forgot password?
-                  </Link>
-                </Grid>
                 <Grid item>
                   <Link href="/userregistration" variant="body2">
                     {"Don't have an account? Sign Up"}
+                  </Link>
+                </Grid>
+                
+                <Grid item xs>
+                  <Link href="/main"  variant="body2">
+                    {"Go To Main Dashboard"}
                   </Link>
                 </Grid>
               </Grid>

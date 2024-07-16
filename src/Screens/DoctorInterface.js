@@ -46,21 +46,22 @@ const useStyles = makeStyles((theme) => ({
 
 export default function DoctorInterface(props) {
   const [states, setStates] = useState([]);
+  const [stateid, setStateId] = useState("");
   const [city, setCity] = useState([]);
+  const [cityid, setCityId] = useState("");
   const [category, setCategory] = useState([]);
   const [categoryId, setCategoryId] = useState("");
   const [doctorName, setDoctorName] = useState("");
   const [dob, setDOB] = useState("1/1/1");
   const [gender, setGender] = useState("");
   const [address, setAddress] = useState("");
-  const [stateid, setStateId] = useState("");
-  const [cityid, setCityId] = useState("");
   const [qualification, setQualification] = useState("");
   const [emailId, setEmailId] = useState("");
   const [mobileno, setMobileno] = useState("");
   const [password, setPassword] = useState("");
   const [photograph, setPhotograph] = useState({ url: "", bytes: "" });
   const [formError, setFormError] = useState({});
+ 
   const handleReset = () => {
     setAddress("");
     setDoctorName("");
@@ -147,26 +148,26 @@ export default function DoctorInterface(props) {
     setCategory(data);
   };
 
-  const fillStates = () => {
-    return states.map((item) => {
-      return <MenuItem value={item.id}>{item.statename}</MenuItem>;
-    });
-  };
   const fillCategory = () => {
     return category.map((item) => {
       return <MenuItem value={item.id}>{item.categoryname}</MenuItem>;
     });
   };
   const show=()=>{
-  
+    
     var x=new Array(4)
     x.fill(0)
     return x.map((item,index)=>{
-       
+      
       return <TextField label={"Option"+index}/>
     }) 
     
   }
+  const fillStates = () => {
+    return states.map((item) => {
+      return <MenuItem value={item.id}>{item.statename}</MenuItem>;
+    });
+  };
   const fetchAllCity = async (sid) => {
     var body = { id: sid };
 
